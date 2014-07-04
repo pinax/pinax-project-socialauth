@@ -95,7 +95,8 @@ TEMPLATE_CONTEXT_PROCESSORS = [
     "django.core.context_processors.tz",
     "django.core.context_processors.request",
     "django.contrib.messages.context_processors.messages",
-    "account.context_processors.account",
+    "social.apps.django_app.context_processors.backends",
+    "social.apps.django_app.context_processors.login_redirect",
     "pinax_theme_bootstrap.context_processors.theme",
 ]
 
@@ -134,6 +135,7 @@ INSTALLED_APPS = [
     "account",
     "eventlog",
     "metron",
+    "social.apps.django_app.default",
 
     # project
     "{{ project_name }}",
@@ -184,5 +186,10 @@ ACCOUNT_LOGOUT_REDIRECT_URL = "home"
 ACCOUNT_EMAIL_CONFIRMATION_EXPIRE_DAYS = 2
 
 AUTHENTICATION_BACKENDS = [
-    "account.auth_backends.UsernameAuthenticationBackend",
+    "social.backends.twitter.TwitterOAuth",
+    "django.contrib.auth.backends.ModelBackend"
 ]
+
+SOCIAL_AUTH_LOGIN_REDIRECT_URL = "/"
+SOCIAL_AUTH_TWITTER_KEY = "{{ twitter_key }}"
+SOCIAL_AUTH_TWITTER_SECRET = "{{ twitter_secret }}"
