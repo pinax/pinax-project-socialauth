@@ -78,7 +78,7 @@ STATICFILES_FINDERS = [
 ]
 
 # Make this unique, and don't share it with anybody.
-SECRET_KEY = "{{ secret_key }}"
+SECRET_KEY = "p466i8u&4vig6^t73d-lfminq747wpt=*d#_gtp5+t0nq#^#)n"
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = [
@@ -109,10 +109,10 @@ MIDDLEWARE_CLASSES = [
     "django.contrib.messages.middleware.MessageMiddleware",
 ]
 
-ROOT_URLCONF = "{{ project_name }}.urls"
+ROOT_URLCONF = "project_name.urls"
 
 # Python dotted path to the WSGI application used by Django's runserver.
-WSGI_APPLICATION = "{{ project_name }}.wsgi.application"
+WSGI_APPLICATION = "project_name.wsgi.application"
 
 TEMPLATE_DIRS = [
     os.path.join(PACKAGE_ROOT, "templates"),
@@ -138,7 +138,7 @@ INSTALLED_APPS = [
     "social.apps.django_app.default",
 
     # project
-    "{{ project_name }}",
+    "project_name",
 ]
 
 # A sample logging configuration. The only tangible logging
@@ -191,5 +191,5 @@ AUTHENTICATION_BACKENDS = [
 ]
 
 SOCIAL_AUTH_LOGIN_REDIRECT_URL = "/"
-SOCIAL_AUTH_TWITTER_KEY = "{{ twitter_key }}"
-SOCIAL_AUTH_TWITTER_SECRET = "{{ twitter_secret }}"
+SOCIAL_AUTH_TWITTER_KEY = ""
+SOCIAL_AUTH_TWITTER_SECRET = ""
