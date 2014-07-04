@@ -1,4 +1,4 @@
-{% extends "banner_base.html" %}
+{% extends "site_base.html" %}
 
 {% load i18n %}
 
@@ -6,32 +6,39 @@
 
 {% block body_class %}home{% endblock %}
 
-{% block banner %}
-    <h1>{% trans "Welcome to Pinax" %}</h1>
-    <p>
-        {% blocktrans %}
-        <b>Pinax</b> is a <a href="http://djangoproject.com/">Django</a>
-        project intended to provide a starting point for websites. By
-        integrating numerous reusable Django apps to take care of the
-        things that many sites have in common, it lets you focus on what
-        makes your site different.
-        {% endblocktrans %}
-    </p>
+{% block body_base %}
+    <section class="jumbotron">
+        <div class="container">
+            <h1>{% trans "Welcome to Pinax" %}</h1>
+            <p>
+                {% blocktrans %}
+                <b>Pinax</b> is a <a href="http://djangoproject.com/">Django</a>
+                project intended to provide a starting point for websites. By
+                integrating numerous reusable Django apps to take care of the
+                things that many sites have in common, it lets you focus on what
+                makes your site different.
+                {% endblocktrans %}
+            </p>
 
-    <h2>About Account Project</h2>
-    <p>
-        {% blocktrans %}
-        In addition to what is provided by the "zero" project, this project
-        provides thorough integration with django-user-accounts, adding
-        comprehensive account management functionality. It is a foundation
-        suitable for most sites that have user accounts.
-        {% endblocktrans %}
-    </p>
-
-    {% if user.is_authenticated %}
-        {% url "what_next" as what_next_url %}
-        <p class="what_next">{% blocktrans %}Wondering <a href="{{ what_next_url }}" class="btn btn-primary large">What Next</a>?{% endblocktrans %}</p>
-    {% else %}
-        <a href="{% url 'social:begin' 'twitter' %}">Twitter</a>
-    {% endif %}
+            <h2>About Account Project</h2>
+            <p>
+                {% blocktrans %}
+                In addition to what is provided by the "zero" project, this project
+                provides thorough integration with django-user-accounts, adding
+                comprehensive account management functionality. It is a foundation
+                suitable for most sites that have user accounts.
+                {% endblocktrans %}
+            </p>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            {% if user.is_authenticated %}
+                {% url "what_next" as what_next_url %}
+                <p class="what_next">{% blocktrans %}Wondering <a href="{{ what_next_url }}" class="btn btn-primary large">What Next</a>?{% endblocktrans %}</p>
+            {% else %}
+                <a href="{% url 'social:begin' 'twitter' %}">Twitter</a>
+            {% endif %}
+        </div>
+    </section>
 {% endblock %}
