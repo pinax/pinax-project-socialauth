@@ -1,8 +1,7 @@
 # -*- coding: utf-8 -*-
 
 __about__ = """
-In addition to what is provided by the "zero" project, this project
-provides thorough integration with django-user-accounts, adding
-comprehensive account management functionality. It is a foundation
-suitable for most sites that have user accounts.
+This project is similar to pinax-project-account in providing a foundation for
+sites that have user accounts but it differs in supporting social
+authentication rather than local password based authentication.
 """
