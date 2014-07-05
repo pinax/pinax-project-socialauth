@@ -5,3 +5,31 @@ body {
 section {
     padding: 20px 0;
 }
+
+.feature-columns {
+    .make-row();
+
+    > div {
+        i.fa {
+            margin-bottom: 0.2em;
+        }
+        .make-sm-column(4);
+        .text-center;
+        margin: 2em 0;
+    }
+}
+
+.social-login-row {
+    .make-row();
+
+    > div {
+        .make-sm-column(4);
+        > a {
+            .btn;
+            .btn-default;
+            .btn-lg;
+            display: block;
+            width: 100%;
+        }
+    }
+}
