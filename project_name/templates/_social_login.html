@@ -1,18 +1,20 @@
-<p class="lead text-center">Log in with one of the following:</p>
-<div class="social-login-row">
-    <div>
-        <a href="{% url "social:begin" "twitter" %}">
-            <i class="fa fa-twitter"></i> Twitter
-        </a>
-    </div>
-    <div>
-        <a href="{% url "social:begin" "facebook" %}">
-            <i class="fa fa-facebook-square"></i> Facebook
-        </a>
-    </div>
-    <div>
-        <a href="{% url "social:begin" "google-oauth2" %}">
-            <i class="fa fa-google"></i> Google
-        </a>
+<div class="social-login">
+    <p class="lead text-center">Log in with one of the following:</p>
+    <div class="social-login-row">
+        <div>
+            <a href="{% url "social:begin" "twitter" %}">
+                <i class="fa fa-twitter"></i> Twitter
+            </a>
+        </div>
+        <div>
+            <a href="{% url "social:begin" "facebook" %}">
+                <i class="fa fa-facebook-square"></i> Facebook
+            </a>
+        </div>
+        <div>
+            <a href="{% url "social:begin" "google-oauth2" %}">
+                <i class="fa fa-google"></i> Google
+            </a>
+        </div>
     </div>
 </div>
