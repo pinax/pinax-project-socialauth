@@ -192,6 +192,19 @@ AUTHENTICATION_BACKENDS = [
     "django.contrib.auth.backends.ModelBackend"
 ]
 
+SOCIAL_AUTH_PIPELINE = [
+    "social.pipeline.social_auth.social_details",
+    "social.pipeline.social_auth.social_uid",
+    "social.pipeline.social_auth.auth_allowed",
+    "social.pipeline.social_auth.social_user",
+    "social.pipeline.user.get_username",
+    "project_name.pipeline.prevent_dupes",
+    "social.pipeline.user.create_user",
+    "social.pipeline.social_auth.associate_user",
+    "social.pipeline.social_auth.load_extra_data",
+    "social.pipeline.user.user_details"
+]
+
 SOCIAL_AUTH_LOGIN_REDIRECT_URL = "/"
 
 SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = os.environ.get("SOCIAL_AUTH_GOOGLE_OAUTH2_KEY")
