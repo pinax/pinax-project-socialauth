@@ -3,15 +3,10 @@ import os
 
 PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir))
 PACKAGE_ROOT = os.path.abspath(os.path.dirname(__file__))
+tweaked settings to prevent Django 1.5 detection in Django 1.7
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
-
-ADMINS = [
-    # ("Your Name", "your_email@example.com"),
-]
-
-MANAGERS = ADMINS
 
 DATABASES = {
     "default": {
