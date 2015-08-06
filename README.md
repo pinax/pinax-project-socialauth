@@ -1,5 +1,6 @@
 pinax-project-socialauth
 ========================
+[![Join us on Slack](http://slack.pinaxproject.com/badge.svg)](http://slack.pinaxproject.com/)
 
 This project is similar to pinax-project-account in providing a foundation for
 sites that have user accounts but it differs in supporting social
