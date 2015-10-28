@@ -44,7 +44,7 @@ Usage
 Documentation
 --------------
 
-The Pinax documentation is available at http://pinaxproject.com/pinax/.
+The pinax-project-socialauth documentation is currently under construction. If you would like to help us write documentation, please join our Pinax Project Slack channel and let us know! The Pinax documentation is available at http://pinaxproject.com/pinax/.
 
 
 Code of Conduct
